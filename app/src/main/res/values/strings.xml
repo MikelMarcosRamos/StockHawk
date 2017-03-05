@@ -33,4 +33,8 @@
     <string name="toast_no_connectivity">Will refresh when network available.</string>
     <string name="toast_non_existing_stock">Stock %s does not exist.</string>
 
+    <string name="arg_selected_symbol" translatable="false">selectedSymbol</string>
+    <string name="lbl_position">Position:</string>
+    <string name="lbl_num_elements">Num. Stocks:</string>
+
 </resources>

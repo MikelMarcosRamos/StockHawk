@@ -1,6 +1,7 @@
 package com.udacity.stockhawk.ui;
 
 import android.content.Context;
+import android.content.Intent;
 import android.database.Cursor;
 import android.net.ConnectivityManager;
 import android.net.NetworkInfo;
@@ -43,10 +44,25 @@ public class MainActivity extends AppCompatActivity implements LoaderManager.Loa
     @BindView(R.id.error)
     TextView error;
     private StockAdapter adapter;
+    private boolean mTwoPane;
 
     @Override
     public void onClick(String symbol) {
-        Timber.d("Symbol clicked: %s", symbol);
+        if (this.mTwoPane) {
+            Bundle arguments = new Bundle();
+            arguments.putString(getString(R.string.arg_selected_symbol), symbol);
+            DetallesStockFragment fragment = new DetallesStockFragment();
+            fragment.setArguments(arguments);
+            getSupportFragmentManager().beginTransaction()
+                    .replace(R.id.detalles_stock_container, fragment)
+                    .commit();
+        } else {
+            Context context = this;
+            Class destinationClass = DetallesStockActivity.class;
+            Intent intentToStartDetailActivity = new Intent(context, destinationClass);
+            intentToStartDetailActivity.putExtra(getString(R.string.arg_selected_symbol), symbol);
+            startActivity(intentToStartDetailActivity);
+        }
     }
 
     @Override
@@ -55,6 +71,7 @@ public class MainActivity extends AppCompatActivity implements LoaderManager.Loa
 
         setContentView(R.layout.activity_main);
         ButterKnife.bind(this);
+        this.mTwoPane = findViewById(R.id.detalles_stock_container) != null;
 
         adapter = new StockAdapter(this, this);
         stockRecyclerView.setAdapter(adapter);
