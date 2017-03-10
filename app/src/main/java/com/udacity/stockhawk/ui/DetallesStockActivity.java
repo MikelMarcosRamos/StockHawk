@@ -7,10 +7,6 @@ import android.support.v7.app.AppCompatActivity;
 
 import com.udacity.stockhawk.R;
 
-/**
- * Created by chronoss on 4/03/17.
- */
-
 public class DetallesStockActivity extends AppCompatActivity {
 
     @Override

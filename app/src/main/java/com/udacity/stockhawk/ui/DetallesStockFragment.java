@@ -103,7 +103,7 @@ public class DetallesStockFragment extends Fragment implements SeekBar.OnSeekBar
         if (cursor != null) {
             if (cursor.getCount() > 0) {
 
-                entries = new ArrayList<Entry>();
+                entries = new ArrayList<>();
                 cursor.moveToFirst();
                 price.setText(cursor.getString(cursor.getColumnIndex(Contract.Quote.COLUMN_PRICE)));
                 change.setText(cursor.getString(cursor.getColumnIndex(Contract.Quote.COLUMN_PERCENTAGE_CHANGE)));
@@ -209,7 +209,7 @@ public class DetallesStockFragment extends Fragment implements SeekBar.OnSeekBar
             numElementos = this.entries.size() - posicion;
         }
 
-        ArrayList<Entry> yVals1 = new ArrayList<Entry>();
+        ArrayList<Entry> yVals1 = new ArrayList<>();
 
         for (int count = 0;count < numElementos; count++) {
             Entry entry = this.entries.get(posicion + count);
@@ -229,7 +229,7 @@ public class DetallesStockFragment extends Fragment implements SeekBar.OnSeekBar
 
             set1.setColors(ColorTemplate.MATERIAL_COLORS);
 
-            ArrayList<ILineDataSet> dataSets = new ArrayList<ILineDataSet>();
+            ArrayList<ILineDataSet> dataSets = new ArrayList<>();
             dataSets.add(set1);
 
             LineData data = new LineData(dataSets);
