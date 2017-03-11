@@ -43,13 +43,17 @@
                 android:layout_alignParentStart="true"
                 android:layout_margin="8dp"
                 android:layout_marginEnd="5dp"
+                android:layout_marginRight="5dp"
                 android:layout_marginTop="8dp"
                 android:layout_toStartOf="@+id/tvPosition"
+                android:layout_toLeftOf="@+id/tvPosition"
                 android:max="200"
                 android:paddingBottom="12dp"
                 app:layout_constraintHorizontal_bias="1.0"
                 app:layout_constraintLeft_toRightOf="@+id/lbl_position"
+                app:layout_constraintStart_toEndOf="@+id/lbl_position"
                 app:layout_constraintRight_toLeftOf="@+id/tvPosition"
+                app:layout_constraintEnd_toStartOf="@+id/tvPosition"
                 app:layout_constraintTop_toTopOf="parent" />
 
             <TextView
@@ -63,6 +67,7 @@
                 android:text=""
                 android:textAppearance="?android:attr/textAppearanceSmall"
                 app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
                 app:layout_constraintTop_toTopOf="@+id/sb_position"/>
         </android.support.constraint.ConstraintLayout>
 
@@ -86,11 +91,15 @@
                 android:layout_height="wrap_content"
                 android:layout_margin="8dp"
                 android:layout_marginEnd="5dp"
+                android:layout_marginRight="5dp"
                 android:layout_toStartOf="@+id/tvNumElements"
+                android:layout_toLeftOf="@+id/tvNumElements"
                 android:max="1500"
                 android:paddingBottom="12dp"
                 app:layout_constraintLeft_toRightOf="@+id/lbl_num_elements"
+                app:layout_constraintStart_toEndOf="@+id/lbl_num_elements"
                 app:layout_constraintRight_toLeftOf="@+id/tvNumElements"
+                app:layout_constraintEnd_toStartOf="@+id/tvNumElements"
                 app:layout_constraintTop_toTopOf="parent" />
 
             <TextView
@@ -103,6 +112,7 @@
                 android:text=""
                 android:textAppearance="?android:attr/textAppearanceSmall"
                 app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
                 app:layout_constraintTop_toTopOf="@+id/sb_num_elements"/>
         </android.support.constraint.ConstraintLayout>
 
