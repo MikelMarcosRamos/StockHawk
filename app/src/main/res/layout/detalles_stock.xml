@@ -16,6 +16,7 @@
             android:layout_height="wrap_content" />
 
         <com.github.mikephil.charting.charts.LineChart
+            android:contentDescription="@string/stock_history"
             android:layout_width="match_parent"
             android:layout_height="200dip"
             android:id="@+id/graph" />
@@ -35,6 +36,7 @@
 
             <SeekBar
                 android:id="@+id/sb_position"
+                android:contentDescription="@string/first_stock_history_position"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_alignParentBottom="true"
@@ -42,16 +44,16 @@
                 android:layout_margin="8dp"
                 android:layout_marginEnd="5dp"
                 android:layout_marginTop="8dp"
-                android:layout_toStartOf="@+id/tvYMax"
+                android:layout_toStartOf="@+id/tvPosition"
                 android:max="200"
                 android:paddingBottom="12dp"
                 app:layout_constraintHorizontal_bias="1.0"
                 app:layout_constraintLeft_toRightOf="@+id/lbl_position"
-                app:layout_constraintRight_toLeftOf="@+id/tvYMax"
+                app:layout_constraintRight_toLeftOf="@+id/tvPosition"
                 app:layout_constraintTop_toTopOf="parent" />
 
             <TextView
-                android:id="@+id/tvYMax"
+                android:id="@+id/tvPosition"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_alignBottom="@+id/sb_position"
@@ -79,19 +81,20 @@
 
             <SeekBar
                 android:id="@+id/sb_num_elements"
+                android:contentDescription="@string/number_of_stock_elements_to_show"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_margin="8dp"
                 android:layout_marginEnd="5dp"
-                android:layout_toStartOf="@+id/tvXMax"
+                android:layout_toStartOf="@+id/tvNumElements"
                 android:max="1500"
                 android:paddingBottom="12dp"
                 app:layout_constraintLeft_toRightOf="@+id/lbl_num_elements"
-                app:layout_constraintRight_toLeftOf="@+id/tvXMax"
+                app:layout_constraintRight_toLeftOf="@+id/tvNumElements"
                 app:layout_constraintTop_toTopOf="parent" />
 
             <TextView
-                android:id="@+id/tvXMax"
+                android:id="@+id/tvNumElements"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_alignBottom="@+id/sb_num_elements"

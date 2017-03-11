@@ -159,7 +159,7 @@ public class MainActivity extends AppCompatActivity implements LoaderManager.Loa
 
     @Override
     public void onLoadFinished(Loader<Cursor> loader, Cursor data) {
-        widget_empty.setVisibility(View.INVISIBLE);
+        widget_empty.setVisibility(View.GONE);
         swipeRefreshLayout.setRefreshing(false);
 
         if (data.getCount() != 0) {

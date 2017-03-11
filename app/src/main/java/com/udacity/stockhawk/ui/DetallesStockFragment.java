@@ -56,10 +56,10 @@ public class DetallesStockFragment extends Fragment implements SeekBar.OnSeekBar
     SeekBar mSeekBarPosition;
     @BindView(R.id.sb_num_elements)
     SeekBar mSeekBarNumElements;
-    @BindView(R.id.tvXMax)
-    TextView tvX;
-    @BindView(R.id.tvYMax)
-    TextView tvY;
+    @BindView(R.id.tvNumElements)
+    TextView tvNumElements;
+    @BindView(R.id.tvPosition)
+    TextView tvPosition;
 
     @Override
     public void onCreate(@Nullable Bundle savedInstanceState) {
@@ -130,9 +130,9 @@ public class DetallesStockFragment extends Fragment implements SeekBar.OnSeekBar
         this.mSeekBarNumElements.setProgress(this.mNumElements);
 
         this.mSeekBarPosition.setMax(this.entries.size() - 2);
-        tvY.setText(String.valueOf(this.mSeekBarPosition.getProgress()));
+        tvPosition.setText(String.valueOf(this.mSeekBarPosition.getProgress()));
         this.mSeekBarNumElements.setMax(this.entries.size());
-        tvX.setText(String.valueOf(this.mSeekBarNumElements.getProgress()));
+        tvNumElements.setText(String.valueOf(this.mSeekBarNumElements.getProgress()));
 
         this.mSeekBarPosition.setOnSeekBarChangeListener(this);
         this.mSeekBarNumElements.setOnSeekBarChangeListener(this);
@@ -184,8 +184,8 @@ public class DetallesStockFragment extends Fragment implements SeekBar.OnSeekBar
         this.mPosition = this.mSeekBarPosition.getProgress();
         this.mNumElements = this.mSeekBarNumElements.getProgress();
 
-        tvY.setText("" + (this.mSeekBarPosition.getProgress()));
-        tvX.setText("" + (this.mSeekBarNumElements.getProgress()+2));
+        tvPosition.setText("" + (this.mSeekBarPosition.getProgress()));
+        tvNumElements.setText("" + (this.mSeekBarNumElements.getProgress()+2));
 
         setData( );
     }

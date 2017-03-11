@@ -39,5 +39,9 @@
     <string name="no_stock_information">No Stock Information</string>
     <string name="error_message">Error message</string>
     <string name="lbl_widget_details_receiver">Stock Hawk Details</string>
+    <string name="add_stock">Add Stock</string>
+    <string name="stock_history">Stock history</string>
+    <string name="first_stock_history_position">First stock history position</string>
+    <string name="number_of_stock_elements_to_show">Number of stock elements to show</string>
 
 </resources>
